@@ -1,0 +1,79 @@
+:root{
+    /* definiamo delle variabili nella pseudoclasse :root che si riferisce a html con specificità maggiaore */
+    --color-bg: crimson;
+    --color-text-default: #fff;
+    --color-page1: #FE0058;
+    --color-page2: #FE00EA;
+    --color-page3: #8500FF;
+    --color-page4: #005CFF;
+    --color-page5: #2E7A84;
+
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    /* le variabili definite in :root possiamo richiamarle con var(variabile) */
+    background-color: var(--color-bg);
+    color: var(--color-text-default);
+    scroll-behavior: smooth;
+}
+html, body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+input[type=radio]{
+    display: none;
+}
+label.lab{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    margin: 4px;
+    cursor: pointer;
+}
+label.lab:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+label.lab-sel{
+    background-color: rgba(255, 255, 255, 0.5);
+    /* creiamo l effetto bagliore con box-shadow: x, y, raggio, estenzione */
+    box-shadow: 0 0 2px 4px rgba(255, 255, 255, 0.25);
+}
+section#paginazione{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+section#pagine{
+    width: 500vw;
+    height: 100vh;
+    display: flex;
+}
+section#pagine > div{
+    /* grow shrink basis */
+    flex: 0 0 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* i rem fanno riferimento alla dimensione di base impostata nel browser. 2rem significa il doppio di quella dimensione */
+    font-size: 2rem;
+    transition: all .8s ease-in-out;
+}
+#page1 { background-color: var(--color-page1); }
+#page2 { background-color: var(--color-page2); }
+#page3 { background-color: var(--color-page3); }
+#page4 { background-color: var(--color-page4); }
+#page5 { background-color: var(--color-page5); }
+/* Logica in css, scorrimento pagine */
+input#inp1:checked ~ div#page1 { margin-left: 0; }
+input#inp2:checked ~ div#page1 { margin-left: -20%; }
+input#inp3:checked ~ div#page1 { margin-left: -40%; }
+input#inp4:checked ~ div#page1 { margin-left: -60%; }
+input#inp5:checked ~ div#page1 { margin-left: -80%; }

@@ -1,0 +1,40 @@
+:root{
+    --color-bg-base: #bdaaaa;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html, body{
+    width: 200vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    background-color: var(--color-bg-base);
+}
+#pagina-difficolta{
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+}
+#pagina-difficolta > *{
+    margin-top: 1rem;
+}
+#pagina-game{
+    width: 100vw;
+    height: 100vh;
+    background-color: blue;
+    transition: all .5s;
+}
+.close{
+    margin-left: -50%;
+}
+.open{
+    margin-left: 0;
+}

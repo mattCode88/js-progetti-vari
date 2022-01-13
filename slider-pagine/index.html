@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <section id="pagine">
+
+        <input type="radio" name="inp" id="inp1" checked>
+        <input type="radio" name="inp" id="inp2">
+        <input type="radio" name="inp" id="inp3">
+        <input type="radio" name="inp" id="inp4">
+        <input type="radio" name="inp" id="inp5">
+
+        <div id="page1" class="page1">Pagina 1</div>
+        <div id="page2">Pagina 2</div>
+        <div id="page3">Pagina 3</div>
+        <div id="page4">Pagina 4</div>
+        <div id="page5">Pagina 5</div>
+
+    </section>
+
+    <section id="paginazione">
+
+        <!-- L' attributo data permette di definire un attributo personalizzato con relativo valore. Ha una grande utilità se abbinato a js -->
+        <label for="inp1" data-page="1" class="lab lab-sel"></label>
+        <label for="inp2" data-page="2" class="lab"></label>
+        <label for="inp3" data-page="3" class="lab"></label>
+        <label for="inp4" data-page="4" class="lab"></label>
+        <label for="inp5" data-page="5" class="lab"></label>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
